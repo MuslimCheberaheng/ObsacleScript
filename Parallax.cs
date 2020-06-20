@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
         if(transform.position.x <= endX)
         {
-            Vector2 pos = new Vector2(StartX, transform.position.y);
+            Vector2 pos = new Vector2(StartX, transform.position.y); //make the BG looping
             transform.position = pos;
         }
     }

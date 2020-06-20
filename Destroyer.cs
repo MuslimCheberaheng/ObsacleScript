@@ -8,6 +8,6 @@ public class Destroyer : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifetime); //to destroy the object after time passed
     }       
 }

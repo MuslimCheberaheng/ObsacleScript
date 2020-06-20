@@ -7,13 +7,7 @@ public class Score : MonoBehaviour
 {
     public int score;
     public Text scoreDisplay;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         scoreDisplay.text = score.ToString();
@@ -23,7 +17,7 @@ public class Score : MonoBehaviour
     {
         if(collision.CompareTag("Obstacle"))
         {
-            score++;
+            score++; //+1 score if the Obstacle touching collider
             Debug.Log(score);
         }
     }

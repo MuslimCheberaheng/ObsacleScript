@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour
     
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime); //enemies always move left
         speed += Time.deltaTime;
     }
 
@@ -26,8 +26,8 @@ public class Obstacle : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             camShaking.CamShake();
-            Instantiate(FX, transform.position, Quaternion.identity);
-            other.GetComponent<PlayerCtrl>().Health -= damage;
+            Instantiate(FX, transform.position, Quaternion.identity); //show the FX if enemies collide with player
+            other.GetComponent<PlayerCtrl>().Health -= damage; //decease player health
             Debug.Log("Health -1");
             Destroy(gameObject);
         }

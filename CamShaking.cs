@@ -5,19 +5,9 @@ using UnityEngine;
 public class CamShaking : MonoBehaviour
 {
     public Animator CamAnim;
-    void Start()
-    {
-        
-    }
-
     
-    void Update()
-    {
-        
-    }
-
     public void CamShake()
     {
-        CamAnim.SetTrigger("shaking");
+        CamAnim.SetTrigger("shaking"); //shaking the camera when the player touche an enemy
     }
 }

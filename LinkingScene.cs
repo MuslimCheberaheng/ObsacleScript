@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class LinkingScene : MonoBehaviour
 {
     public int SCENELOAD;
-    public void SceneLoaded(int SCENELOAD)
+    public void SceneLoaded(int SCENELOAD) //Link between scenes by using number in buildsetting 
     {
         SceneManager.LoadScene(SCENELOAD);
     }
 
     public void OnApplicationQuit()
     {
-        Application.Quit();
+        Application.Quit(); //quit the game 
     }
 }

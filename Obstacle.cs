@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour
         {
             camShaking.CamShake();
             Instantiate(FX, transform.position, Quaternion.identity); //show the FX if enemies collide with player
-            other.GetComponent<PlayerCtrl>().Health -= damage; //decease player health
+            other.GetComponent<PlayerCtrl>().Health -= damage; //decrease player's health
             Debug.Log("Health -1");
             Destroy(gameObject);
         }
